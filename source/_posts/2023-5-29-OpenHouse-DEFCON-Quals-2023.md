@@ -12,7 +12,7 @@ date: 2023-05-29
 File challenge: [open-house](https://robbert1978.github.io/assets/uploads/open-house)
 
 ## Analyze
-![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/bc7228f9-d9c3-425d-893e-a54a35dcfdf6)
+![image](https://github.com/robbert1978/robbert1978.github.io.old/assets/31349426/bc7228f9-d9c3-425d-893e-a54a35dcfdf6)
 
 32bit ELF with PIE, no RELRO and No canary.
 
@@ -366,11 +366,11 @@ p.recvuntil(b"2"*512)
 leak_heap = u32(p.recv(4))
 log.info(f"leak_heap: {hex(leak_heap)}")
 ```
-![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/59d09249-2f12-4641-9999-a9bc73722f0f)
+![image](https://github.com/robbert1978/robbert1978.github.io.old/assets/31349426/59d09249-2f12-4641-9999-a9bc73722f0f)
 
 Remember the `Node head` addr is on the heap. Overwritting `Node 2`.next to the heap addr that contains `Node head` addr so I can leak the PIE.
 
-![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/5cc7af36-7012-4108-bbbe-fee5406cffbb)
+![image](https://github.com/robbert1978/robbert1978.github.io.old/assets/31349426/5cc7af36-7012-4108-bbbe-fee5406cffbb)
 
 ```py
 target = leak_heap-9408 # Contain PIE addr
@@ -385,7 +385,7 @@ log.info(f"PIE: {hex(e.address)}")
 When I successfully leaked the PIE address, it's so easy to leak libc's address by overwriting `Node 2`.next to any got address, also this ELF has `no RERLO` so I can overwrite a got to `system`.
 
 I found that the remote server uses libc 2.37.
-![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/af0ef274-7fea-4d32-975d-520654536b92)
+![image](https://github.com/robbert1978/robbert1978.github.io.old/assets/31349426/af0ef274-7fea-4d32-975d-520654536b92)
 
 Final script:
 ```py

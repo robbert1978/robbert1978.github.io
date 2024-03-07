@@ -160,8 +160,8 @@ But we still need leak heap address and kernel base address.
 The function `matrix_set_info` allows us to set any size for the matrix via `matrix->data = kmalloc(matrix->rows * matrix->cols, GFP_KERNEL);`
 
 So I will take advantage of [`struct tty_struct`](https://elixir.bootlin.com/linux/v6.0.15/source/include/linux/tty.h#L195) to leak:
-![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/6307e6bb-42de-4ab9-a956-f43ca9ab0f5a)
-![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/1269e091-29d2-4240-b0bb-73abe924b131)
+![image](https://github.com/robbert1978/robbert1978.github.io.old/assets/31349426/6307e6bb-42de-4ab9-a956-f43ca9ab0f5a)
+![image](https://github.com/robbert1978/robbert1978.github.io.old/assets/31349426/1269e091-29d2-4240-b0bb-73abe924b131)
 
 
 We can leak kernel base address via offset 0x18 and heap address via offset 0x38.
@@ -336,9 +336,9 @@ Overwrite `.ops` of the new `struct tty_struct`, we can control RIP ( I will set
 
 By using `ROPgadget`, I see a useful gadget ( I don't know why `ROPgadget` is different from `gdb` :) ) :  
 
-![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/844402d0-7178-4c37-8cf2-36ecaa117cbf)
-![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/b0cd2c11-dc2f-4d55-8f12-e542265007c0)
-![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/32c349f7-07ed-4540-acf0-6cd53600d16c)
+![image](https://github.com/robbert1978/robbert1978.github.io.old/assets/31349426/844402d0-7178-4c37-8cf2-36ecaa117cbf)
+![image](https://github.com/robbert1978/robbert1978.github.io.old/assets/31349426/b0cd2c11-dc2f-4d55-8f12-e542265007c0)
+![image](https://github.com/robbert1978/robbert1978.github.io.old/assets/31349426/32c349f7-07ed-4540-acf0-6cd53600d16c)
 
 
 So, i will set `tty_struct->ops->ioctl` = `0xffffffff811571d9`.
@@ -387,7 +387,7 @@ Finally, using that gadget to overwrite `modprobe_path` to `/home/user/vjp` and 
     system("su vjp");
     }
 ```
-![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/e7a3d486-8d7b-4ab2-b92b-37a4e0ed2e37)
+![image](https://github.com/robbert1978/robbert1978.github.io.old/assets/31349426/e7a3d486-8d7b-4ab2-b92b-37a4e0ed2e37)
 
 
 
