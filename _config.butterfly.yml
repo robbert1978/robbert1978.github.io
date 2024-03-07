@@ -33,7 +33,8 @@ code_word_wrap: false
 # formal:
 #   icon: link || the description || color
 social:
-  # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
+  fab fa-github: https://github.com/robbert1978 || Github  || '#24292e'
+  fab fa-twitter: https://twitter.com/robbert_1978 || Twitter || '#24292e'
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
 
 # Image (圖片設置)
@@ -230,10 +231,10 @@ aside:
     button:
       enable: true
       icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/xxxxxx
+      text: Github
+      link: https://github.com/robbert1978
   card_announcement:
-    enable: true
+    enable: false
     content: This is my Blog
   card_recent_post:
     enable: true
@@ -322,8 +323,8 @@ darkmode:
   # autoChangeMode: false
   autoChangeMode: false
   # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
-  start: # 8
-  end: # 22
+  start: 0
+  end: 0
 
 # show scroll percent in scroll-to-top button
 rightside_scroll_percent: false
