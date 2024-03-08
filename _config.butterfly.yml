@@ -34,8 +34,9 @@ code_word_wrap: true
 # formal:
 #   icon: link || the description || color
 social:
-  fab fa-github: https://github.com/robbert1978 || Github  || '#24292e'
-  fab fa-twitter: https://twitter.com/robbert_1978 || Twitter || '#24292e'
+  fab fa-github: https://github.com/robbert1978 || Github  || '#dadfe8'
+  fab fa-twitter: https://twitter.com/robbert_1978 || Twitter || '#dadfe8'
+  fab fa-telegram: https://t.me/r0bb3r7_1978 || Telegram || '#dadfe8'
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
 
 # Image (圖片設置)
