@@ -10,15 +10,15 @@ nav:
 
 # Menu 目錄
 menu:
-  # Home: / || fas fa-home
-  # Archives: /archives/ || fas fa-archive
+  Home: / || fas fa-home
+  Archives: /archives/ || fas fa-archive
   # Tags: /tags/ || fas fa-tags
   # Categories: /categories/ || fas fa-folder-open
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
   # Link: /link/ || fas fa-link
-  # About: /about/ || fas fa-heart
+  About: /aboutme/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -59,8 +59,7 @@ index_img: https://w.wallhaven.cc/full/o3/wallhaven-o3o26p.jpg
 default_top_img: https://i.imgur.com/VsKllAW.jpeg
 
 # The banner image of archive page
-archive_img:
-
+archive_img: 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
 tag_img:
@@ -645,7 +644,7 @@ text_align_justify: false
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: url(/assets/img/bg.jpg)
 
 # Footer Background
 footer_bg: false
@@ -721,7 +720,7 @@ clickShowText:
 
 # Default display mode (網站默認的顯示模式)
 # light (default) / dark
-display_mode: light
+display_mode: dark
 
 # Beautify (美化頁面顯示)
 beautify:

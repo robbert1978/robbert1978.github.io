@@ -4,8 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
->
-
 # 💻 About
 
 <figure><img src="/assets/img/misaka-mikoto.gif" alt=""><figcaption></figcaption></figure>
