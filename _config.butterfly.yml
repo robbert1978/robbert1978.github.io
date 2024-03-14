@@ -54,10 +54,10 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://w.wallhaven.cc/full/o3/wallhaven-o3o26p.jpg
+index_img: /assets/img/index_img.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://i.imgur.com/VsKllAW.jpeg
+default_top_img: /assets/img/default_top_img/.jpg
 
 # The banner image of archive page
 archive_img: 
