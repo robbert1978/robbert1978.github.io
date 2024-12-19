@@ -6,15 +6,29 @@ order: 4
 
 >
 
-# 💻 About
+# 💻 About me
 
 <figure><img src="/assets/img/misaka-mikoto.gif" alt=""><figcaption></figcaption></figure>
 
-A Pwner who is playing for [TheRoundTable](https://ctftime.org/team/194346).
+A Pwner plays for [TheRoundTable team](https://ctftime.org/team/194346).
 
 I'm interested in `Binary Exploitation`. Now I'm focusing on `Linux kernel exploitation`. 
 
 [How to start playing PWN](https://hackemall.live/index.php/2020/05/02/pwnable-roadmap/)
+
+Writing detailed write-ups takes a lot of time, so I don’t have enough time to document all the challenges I’ve solved. If you want to know which CTF events I’ve participated in, check out these links:
+
+https://ctftime.org/team/194346
+
+https://ctftime.org/team/221828
+
+https://ctftime.org/team/358599
+
+https://github.com/robbert1978/CTF-2024
+
+# 🏆 Achievements
+
+No no, the greatest achievement is that you take time to read this blog.
 
 # Image Credits
 
