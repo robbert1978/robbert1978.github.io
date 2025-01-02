@@ -71,7 +71,7 @@ The challenge uses Linux kernel version `6.9.0`. We can get its source codes [he
 
 ## Prepare header files
 
-Fist, create `linux-headers` folder. We wil copy many header files from WSL to this folder:
+Create `linux-headers` folder. We will copy many header files from WSL to this folder:
 
 On WSL shell, run: 
 ```sh
