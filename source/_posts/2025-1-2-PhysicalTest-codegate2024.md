@@ -13,8 +13,9 @@ Hello and Happy new year!!
 
 Today I will write about building til for IDA. The `Physical Test` challenge is used for exampling.
 
+Why this time? Because I'm too lazy. 
 
-Why this time? Because I'm too lazy. But now I've not only written the solution for the challenge but also introduced a new way to reverse the Linux module file, which helps you reduce the time it takes to reverse; use that time to pwn.
+But now I've not only written the solution for the challenge but also introduced a new way to reverse the Linux module file, which helps you reduce the time it takes to reverse; use that time to pwn.
 
 You can get challenge's files [here](https://github.com/robbert1978/robbert1978.github.io/blob/main/source/assets/PhysicalTest-codegate2024.7z).
 
@@ -34,10 +35,9 @@ You can import a til file to IDA database in `Type Libraries` windows (shortcut:
 
 # Build your own TIL
 
-In this tutorial, you have to use Windows and install WSL. If you want to build til file on Linux, try to find other ways by yourself :)/.
+In this tutorial, you have to use Windows and install WSL. If you want to build til file on Linux, try to find other ways yourself :)/.
 
 You should also have idaclang.exe, libclang.dll, ida.hlp from IDA Pro, and tilib64.exe from IDA SDK.
-
 
 NOTE: If your working directory is on Windows system, make it case sensitive before doing anything:
 
@@ -216,7 +216,7 @@ __int64 __fastcall my_mmap(__int64 a1, __int64 a2)
 }
 ```
 
-Now open `Type Libiraries` windows and import the til file that we have built before:
+Now open `Type Libiraries` window and import the til file that we have built before:
 ![alt text](../assets/img/image-21.png)
 
 ![alt text](../assets/img/image-22.png)
@@ -224,12 +224,12 @@ We see the type of `my_fops` is ` file_operations`
 
 ![alt text](../assets/img/image-23.png)
 
-After loading the til, we have the defention of that type:
+After loading the til, we have the defenition of that type:
 
 ![alt text](../assets/img/image-24.png)
 
 
-We see the defenition of `file_operations.mmap` is:
+We see the defenition of `file_operations::mmap` is:
 
 ```c
  int (__cdecl *mmap)(file *, vm_area_struct *);
@@ -290,7 +290,7 @@ int __fastcall my_mmap(file *a1, vm_area_struct *a2)
 
 Do the same with `my_read` , `my_write`, `my_open` and `my_release`.
 
-Also, I added struct called `Private`, used for `file->private_data` (its default type is `void *` ).
+Also, I added struct called `Private`, used for `file->private_data` ( its default type is `void *` ).
 
 ```c
 
@@ -716,13 +716,13 @@ int __fastcall my_mmap(file *a1, vm_area_struct *a2)
 
 1. We can read the page2 via `my_read`, not only via `[vm_start+0x1000, vm_start+0x2000)`
 
-1. Function `my_write` is so annoying, but now we just need to know we can write to the page1 throught this function, AND it releases 4 pages that allocated from `my_open`. It also unmap our userspace page via global variable `backing_vma`.
+1. Function `my_write` is so annoying. But now we just need to know we can write to the page1 throught this function, AND it releases 4 pages that allocated from `my_open`. It also unmap our userspace page via global variable `backing_vma`.
 
 3. Function `my_release` release 4 page objects that allocated from `my_open`. It also unmap our userspace page via global variable `backing_vma`.
 
 ## The bug
 
-Do you noticed that the module saves and checks vm_are_struct object by a global variable.
+Did you notice that the module saves and checks vm_are_struct object by a global variable ?
 
 What if we open the dev file two times ( we will have 2 fds ) and mmap with two fds ?
 
@@ -834,12 +834,12 @@ This address must be in a `seq_file` object, use `search-pattern` with heap addr
 So we can leak heap via this object.
 
 
-## ROP
+### ROP
 
 Finding the right gadgets to overwrite `file_operations` objects is quiet a bit challenge because you can't control its function pointers' arguments.
 
 
-Frist, change `flip->file_operations` to our fake object:
+Change `flip->file_operations` to our fake object:
 
 ```c
  *(uint64_t*)(0x13380b0) = victim_chunk + 0x18 - 0x10;
@@ -858,11 +858,11 @@ I hit the breakpoint:
 
 But as I said, it's hard to control arguments.
 
-BUT I notice that sometimes luckily $rbp is mmaped to our user page.
+BUT I noticed that sometimes luckily $rbp is mmaped to our user page.
 
 ![alt text](../assets/img/image-27.png)
 
-So just write the function pointer to gadget `leave ; ret`:
+So just overwritting the function pointer to gadget `leave ; ret`:
 
 ```
 0xffffffff81287be2: leave ; ret
@@ -1137,7 +1137,8 @@ int main(int argc, char** argv, char** envp)
 }
 ```
 
-You maybe notice that I keep previous values before change anything. Just try to remove 
+You maybe notice that I keep previous values before changing anything. Just try to remove:
+
 ```c
     *(uint64_t*)(0x1337060) = bak1;
     *(uint64_t*)(0x13380b0) = bak2;
@@ -1204,7 +1205,11 @@ extern std::istream std::cin;
 ```
 
 # Final
-Hope this blog is useful to you. If you find anything is wrong or unclear, don't worry about telling me.
+Hope this blog is useful to you. 
+
+If you find anything is wrong or unclear, please tell me.
  
 
+# References
 
+https://docs.hex-rays.com/user-guide/type-libraries/idaclang_tutorial
