@@ -5,7 +5,7 @@ categories:
 tags:
   - Pwn
 published: true
-date: 2024-12-27
+date: 2024-01-02
 ---
 
 
@@ -63,7 +63,7 @@ cd ..
 
 (Want to build faster? Build on your WSL/Linux filesystem then copy to working directory later.)
 
-## Prepare the soure codes
+## Prepare the source codes
 
 The challenge uses Linux kernel version `6.9.0`. We can get its source codes [here](https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.tar.xz).
 
