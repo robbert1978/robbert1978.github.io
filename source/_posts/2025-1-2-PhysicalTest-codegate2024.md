@@ -1150,7 +1150,7 @@ You maybe notice that I keep previous values before changing anything. Just try 
 in `getShell`. You will know why I did that.
 
 
-# TIL kernel module is oke. But what about the others?
+# TIL kernel module is fine. But what about the others?
 
 For other open-source projects, I can't write the details. The building process depends on many things. Try to figure out yourself.
 
