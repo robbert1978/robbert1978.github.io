@@ -8,15 +8,28 @@ order: 4
 
 # 💻 About me
 
-<figure><img src="/assets/img/misaka-mikoto.gif" alt=""><figcaption></figcaption></figure>
-
 A Pwner plays for [TheRoundTable team](https://ctftime.org/team/194346).
 
 I'm interested in `Binary Exploitation`. Now I'm focusing on `Linux kernel exploitation`. 
 
 
+<figure>
+<img src="../assets/img/kernelexp.png" alt="Kernel Exploit" style="width:400px;height:400px;" />
 
-<figure><img src=../assets/img/kernelexp.png width="400" height="400"><figcaption></figcaption></figure>
+<style>
+  img {
+    width: 400px;
+    height: 400px;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
+</figure>
 
 
 [How to start playing PWN](https://hackemall.live/index.php/2020/05/02/pwnable-roadmap/)
