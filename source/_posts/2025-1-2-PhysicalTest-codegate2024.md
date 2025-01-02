@@ -1153,7 +1153,7 @@ in `getShell`. You will know why I did that.
 
 For other open-source projects, I can't write the details. The building process depends on many things. Try to figure out yourself.
 
-But I can give final example to you how about build some stl class in C++
+But I can give the final example to you how about building some stl classes in C++
 
 linux_cpp.mak
 
