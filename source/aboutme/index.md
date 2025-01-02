@@ -14,6 +14,11 @@ A Pwner plays for [TheRoundTable team](https://ctftime.org/team/194346).
 
 I'm interested in `Binary Exploitation`. Now I'm focusing on `Linux kernel exploitation`. 
 
+
+
+<figure><img src=../assets/img/kernelexp.png width="400" height="400"><figcaption></figcaption></figure>
+
+
 [How to start playing PWN](https://hackemall.live/index.php/2020/05/02/pwnable-roadmap/)
 
 Writing detailed write-ups takes a lot of time, so I don’t have enough time to document all the challenges I’ve solved. If you want to know which CTF events I’ve participated in, check out these links:
@@ -39,6 +44,8 @@ I would like to acknowledge and credit the creators of the images used on this w
 - **404 Page Image**: [Artwork on Pixiv](https://www.pixiv.net/en/artworks/111965557)
   
 - **Top Image**: The original source is currently unknown due to multiple reuploads across various websites.
+
+- **About image**: [Artwork on Pixiv](https://www.pixiv.net/en/artworks/114736658)
 
 If you are the creator of any of these artworks and do not want your work displayed here, please contact me, and I will promptly remove it from my website.
 
