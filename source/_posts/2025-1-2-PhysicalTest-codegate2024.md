@@ -712,13 +712,13 @@ int __fastcall my_mmap(file *a1, vm_area_struct *a2)
     [vm_start+0x1000, vm_start+0x2000) -> page1
     [vm_start+0x2000, vm_start+0x3000) -> page2
 
-    Also saved the vm_are_struct object to global variable `backing_vma`.
+    Also saves the vm_are_struct object to global variable `backing_vma`.
 
 1. We can read the page2 via `my_read`, not only via `[vm_start+0x1000, vm_start+0x2000)`
 
-1. Function `my_write` is so annoying. But now we just need to know we can write to the page1 throught this function, AND it releases 4 pages that allocated from `my_open`. It also unmap our userspace page via global variable `backing_vma`.
+1. Function `my_write` is so annoying. But now we just need to know we can write to the page1 throught this function. After that, it releases 4 pages that allocated from `my_open`, and it unmaps our userspace page via global variable `backing_vma`.
 
-3. Function `my_release` release 4 page objects that allocated from `my_open`. It also unmap our userspace page via global variable `backing_vma`.
+3. Function `my_release` release 4 page objects that allocated from `my_open`. It also unmaps our userspace page via global variable `backing_vma`.
 
 ## The bug
 
