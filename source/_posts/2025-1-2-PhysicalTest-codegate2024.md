@@ -716,7 +716,7 @@ int __fastcall my_mmap(file *a1, vm_area_struct *a2)
 
 1. We can read the page2 via `my_read`, not only via `[vm_start+0x1000, vm_start+0x2000)`
 
-1. Function `my_write` is so annoying, but now we just need to know we can write to the page1 throught this function, AND it releases 4 page bjects that allocated from `my_open`. It also unmap our userspace page via global variable `backing_vma`.
+1. Function `my_write` is so annoying, but now we just need to know we can write to the page1 throught this function, AND it releases 4 pages that allocated from `my_open`. It also unmap our userspace page via global variable `backing_vma`.
 
 3. Function `my_release` release 4 page objects that allocated from `my_open`. It also unmap our userspace page via global variable `backing_vma`.
 
@@ -1149,7 +1149,7 @@ You maybe notice that I keep previous values before change anything. Just try to
 in `getShell`. You will know why I did that.
 
 
-# TIL is kernel module is oke. What about others?
+# TIL kernel module is oke. But what about the others?
 
 For other open-source projects, I can't write the details. The building process depends on many things. Try to figure out yourself.
 
