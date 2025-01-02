@@ -14,23 +14,8 @@ I'm interested in `Binary Exploitation`. Now I'm focusing on `Linux kernel explo
 
 
 <figure>
-<img src="../assets/img/kernelexp.png" alt="Kernel Exploit" style="width:400px;height:400px;" />
-
-<style>
-  img {
-    width: 400px;
-    height: 400px;
-  }
-
-  @media (max-width: 768px) {
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-</style>
+  <img src="../assets/img/kernelexp.png" alt="Kernel Exploit" style="width:100%; max-width:400px; aspect-ratio:1/1; object-fit:cover;" />
 </figure>
-
 
 [How to start playing PWN](https://hackemall.live/index.php/2020/05/02/pwnable-roadmap/)
 
