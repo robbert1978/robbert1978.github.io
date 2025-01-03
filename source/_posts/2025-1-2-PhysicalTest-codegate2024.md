@@ -114,19 +114,19 @@ Next, create a file named `linux_kernel_6_9_0.mak`:
 TIL_NAME = linux_kernel_6_9_0
 TIL_DESC = "Linux kernel TIL for 6.9.0"
 INPUT_FILE = linux.h
-SYSTEM_HEADERS = .\linux-headers\system-headers
-KERNEL_HEADERS = .\linux-headers\kernel-headers
+SYSTEM_HEADERS = .\\linux-headers\\system-headers
+KERNEL_HEADERS = .\\linux-headers\\kernel-headers
 
 CLANG_ARGV = -target x86_64-pc-linux-gnu                               \
              -nostdinc                                                 \
              -isystem "$(SYSTEM_HEADERS)"         \
-             -I"$(KERNEL_HEADERS)\arch\x86\include"                      \
-             -I"$(KERNEL_HEADERS)\arch\x86\include\generated"            \
-             -I"$(KERNEL_HEADERS)\include"                               \
-             -I"$(KERNEL_HEADERS)\arch\x86\include\uapi"                 \
-             -I"$(KERNEL_HEADERS)\arch\x86\include\generated\uapi"       \
-             -I"$(KERNEL_HEADERS)\include\uapi"                          \
-             -I"$(KERNEL_HEADERS)\include\generated\uapi"                \
+             -I"$(KERNEL_HEADERS)\\arch\\x86\\include"                      \
+             -I"$(KERNEL_HEADERS)\\arch\\x86\\include\\generated"            \
+             -I"$(KERNEL_HEADERS)\\include"                               \
+             -I"$(KERNEL_HEADERS)\\arch\\x86\\include\\uapi"                 \
+             -I"$(KERNEL_HEADERS)\\arch\\x86\\include\\generated\\uapi"       \
+             -I"$(KERNEL_HEADERS)\\include\\uapi"                          \
+             -I"$(KERNEL_HEADERS)\\include\\generated\\uapi"                \
              -D__KERNEL__                                              \
              -O2                                                       \
              -mfentry                                                  \
@@ -1163,18 +1163,18 @@ TIL_NAME = linux_cpp
 TIL_DESC = "Linux C++"
 INPUT_FILE = linux_cpp.h
 
-SYSTEM_HEADERS = .\linux-headers\system-headers
-USR_INCLUDE_HEADERS = .\linux-headers\usr_include_headers
-LIBC_HEADERS = .\linux-headers\libc_headers
+SYSTEM_HEADERS = .\\linux-headers\\system-headers
+USR_INCLUDE_HEADERS = .\\linux-headers\\usr_include_headers
+LIBC_HEADERS = .\\linux-headers\\libc_headers
 CLANG_ARGV = -target x86_64-pc-linux-gnu                               \
 			-x c++                                                 \
 			-I"$(SYSTEM_HEADERS)" \
-			-I"$(USR_INCLUDE_HEADERS)\linux" \
-			-I"$(USR_INCLUDE_HEADERS)\c++\11" \
-			-I"$(USR_INCLUDE_HEADERS)\x86_64-linux-gnu" \
-			-I"$(USR_INCLUDE_HEADERS)\x86_64-linux-gnu\c++\11" \
+			-I"$(USR_INCLUDE_HEADERS)\\linux" \
+			-I"$(USR_INCLUDE_HEADERS)\\c++\\11" \
+			-I"$(USR_INCLUDE_HEADERS)\\x86_64-linux-gnu" \
+			-I"$(USR_INCLUDE_HEADERS)\\x86_64-linux-gnu\\c++\\11" \
 			-I"$(USR_INCLUDE_HEADERS)" \
-			-I"$(LIBC_HEADERS)\c++\11" \
+			-I"$(LIBC_HEADERS)\\c++\\11" \
 			-I"$(LIBC_HEADERS)"
 			
 
