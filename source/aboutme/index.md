@@ -8,7 +8,7 @@ order: 4
 
 # 💻 About me
 
-A Pwner plays for [TheRoundTable team](https://ctftime.org/team/194346).
+A Pwner plays for [~~TheRoundTable~~](https://ctftime.org/team/194346) [Alternative für Knights](https://ctftime.org/team/369824).
 
 I'm interested in `Binary Exploitation`. Now I'm focusing on `Linux kernel exploitation`. 
 
