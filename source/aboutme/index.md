@@ -2,7 +2,18 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+spotify:
+  size: 'small'
 ---
+
+
+<script src="https://cdn.jsdelivr.net/npm/cplayer/dist/cplayer.min.js"></script>
+{% cplayer autoplay %}
+- name: Macron # name
+  artist: Les Sales Majestés # music artist
+  poster: https://t2.genius.com/unsafe/425x425/https%3A%2F%2Fimages.genius.com%2F1d824b9c1754c81a4550da5817854096.600x600x1.jpg
+  src: /assets/audio/macron.ogg # music resource
+{% endcplayer %}
 
 >
 
@@ -46,5 +57,3 @@ I would like to acknowledge and credit the creators of the images used on this w
 - **About image**: [Artwork on Pixiv](https://www.pixiv.net/en/artworks/114736658)
 
 If you are the creator of any of these artworks and do not want your work displayed here, please contact me, and I will promptly remove it from my website.
-
-
