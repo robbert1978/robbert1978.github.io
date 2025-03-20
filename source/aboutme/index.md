@@ -30,7 +30,7 @@ I'm interested in `Binary Exploitation`. Now I'm focusing on `Linux kernel explo
 
 [How to start playing PWN](https://hackemall.live/index.php/2020/05/02/pwnable-roadmap/)
 
-Writing detailed write-ups takes a lot of time, so I don’t have enough time to document all the challenges I’ve solved. If you want to know which CTF events I’ve participated in, check out these links:
+Writing detailed write-ups takes a lot of time, so I couldn't document all the challenges I’ve solved. If you want to know which CTF events I’ve participated in, check out these links:
 
 https://ctftime.org/team/194346
 
