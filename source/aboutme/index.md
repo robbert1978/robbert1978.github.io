@@ -9,10 +9,10 @@ spotify:
 
 <script src="https://cdn.jsdelivr.net/npm/cplayer/dist/cplayer.min.js"></script>
 {% cplayer autoplay %}
-- name: Macron # name
-  artist: Les Sales Majestés # music artist
-  poster: https://t2.genius.com/unsafe/425x425/https%3A%2F%2Fimages.genius.com%2F1d824b9c1754c81a4550da5817854096.600x600x1.jpg
-  src: /assets/audio/macron.ogg # music resource
+- name: Glimmer of Chaos # name
+  artist: Deadrin # music artist
+  poster: https://images.steamusercontent.com/ugc/2500152590335738583/376FD94BBF32D308558136600FE72D0CC4F898D9/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false
+  src: /assets/audio/TFR_mu_tfr_glimmer_of_chaos.ogg # music resource
 {% endcplayer %}
 
 >
